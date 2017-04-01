@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="501" model="functional.area">
+            <field name="codigo">5001</field>
+            <field name="name">Gastos de Ventas</field>
+        </record>
+        <record id="5002" model="functional.area">
+            <field name="codigo">5002</field>
+            <field name="name">Publicidad de Ventas</field>
+        </record>
+        <record id="5003" model="functional.area">
+            <field name="codigo">5003</field>
+            <field name="name">Relaciones Públicas</field>
+        </record>
+        <record id="5004" model="functional.area">
+            <field name="codigo">5004</field>
+            <field name="name">Distribución</field>
+        </record>
+        <record id="5005" model="functional.area">
+            <field name="codigo">5005</field>
+            <field name="name">Administración</field>
+        </record>
+        <record id="5006" model="functional.area">
+            <field name="codigo">5006</field>
+            <field name="name">Varios</field>
+        </record>
+    </data>
+</odoo>

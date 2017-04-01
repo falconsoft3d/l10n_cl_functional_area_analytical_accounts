@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <odoo>
+    <data>
+
+    <record id="view_form_functional_area" model="ir.ui.view">
+             <field name="name">view.form.functional.area</field>
+             <field name="model">functional.area</field>
+             <field name="arch" type="xml">
+                <form string="Functional Area">
+                  <sheet>
+                    <legend>Area Funcional</legend>
+                       <group>
+                          <group>
+                             <field name="name" />
+                             <field name="codigo"/>
+                             <field name="desc"/>
+                             <field name="debe" readonly="1" widget="monetary"/>
+                             <field name="haber" readonly="1" widget="monetary"/>
+                             <field name="saldo" readonly="1" widget="monetary"/>
+                          </group>
+                       </group>
+                   </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record id="view_tree_functional_area" model="ir.ui.view">
+             <field name="name">Functional Area</field>
+             <field name="model">functional.area</field>
+             <field name="arch" type="xml">
+                <tree>
+                     <field name="name"/>
+                     <field name="codigo"/>
+                     <field name="debe" widget="monetary"/>
+                     <field name="haber" widget="monetary"/>
+                     <field name="saldo" widget="monetary"/>
+                </tree>
+            </field>
+    </record>
+
+    <record id="action_functional_area" model="ir.actions.act_window">
+            <field name="name">Areas</field>
+            <field name="res_model">functional.area</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Presione para crear nuevo Registro</p>
+           </field>
+    </record>
+
+    <menuitem id="functional_area_menu"
+        name="Areas Funcionales Analíticas"
+        parent="account.menu_finance_entries"
+        sequence="31"
+        action="action_functional_area" />
+     </data>
+</odoo>
